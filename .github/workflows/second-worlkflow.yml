@@ -1,0 +1,13 @@
+name: Second Workflow
+on: push
+jobs:
+  Hello-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome message
+        run: echo "Welcome to the repository"
+  buy-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Buy action
+        run: echo "buy action"
