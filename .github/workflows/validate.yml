@@ -1,0 +1,12 @@
+name: Validate
+on: push
+jobs:
+  validate-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get-repo-code
+        uses: actions/checkout@v4
+      - name: validate-html
+        run: test -f index.html && echo "index.html found" || echo "index.html not found"
+      - name: Validate JavaScript
+        run: test -f script.js && echo "script.js found" || echo "script.js not found"
